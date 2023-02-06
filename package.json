@@ -1,0 +1,23 @@
+{
+  "name": "dsa-with-js",
+  "version": "1.0.0",
+  "description": "Learning Algorithms and Data Structures with JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tohirRaihan/DSA-with-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tohirRaihan/DSA-with-js/issues"
+  },
+  "homepage": "https://github.com/tohirRaihan/DSA-with-js#readme",
+  "devDependencies": {
+    "prettier": "^2.8.3"
+  }
+}
