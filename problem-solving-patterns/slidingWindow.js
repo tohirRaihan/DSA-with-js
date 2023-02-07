@@ -15,18 +15,6 @@
  * maxSubarraySum([],4) --> null
  */
 function maxSubarraySum(arr, n) {
-  /*
-  max = 0;
-  FOR (i=0; i<n; i++)
-    max += arr[i];
-  ENDFOR
-
-  FOR (i=0, j=0+n; j < arr.length; i++, j++)
-    newSum = sum - arr[i] + arr[j]
-    IF (newSum > max)
-      max = newSum
-    ENDIF
-  ENDFOR*/
   if (n > arr.length) return null;
   let maxSum = 0;
   for (let i = 0; i < n; i++) {
