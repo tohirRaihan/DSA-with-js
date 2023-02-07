@@ -3,8 +3,8 @@
 
 /**
  * PROBLEM #1:
- * Write a function called maxSubarraySum which accepts an array of integers 
- * and a number called n. The function should calculate the maximum sum of n 
+ * Write a function called maxSubarraySum which accepts an array of integers
+ * and a number called n. The function should calculate the maximum sum of n
  * consecutive elements in the array.
  *
  * EXAMPLES:
@@ -15,5 +15,28 @@
  * maxSubarraySum([],4) --> null
  */
 function maxSubarraySum(arr, n) {
-  
+  /*
+  max = 0;
+  FOR (i=0; i<n; i++)
+    max += arr[i];
+  ENDFOR
+
+  FOR (i=0, j=0+n; j < arr.length; i++, j++)
+    newSum = sum - arr[i] + arr[j]
+    IF (newSum > max)
+      max = newSum
+    ENDIF
+  ENDFOR*/
+  if (n > arr.length) return null;
+  let maxSum = 0;
+  for (let i = 0; i < n; i++) {
+    maxSum += arr[i];
+  }
+
+  let tempSum = maxSum;
+  for (let i = n; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - n] + arr[i];
+    if (tempSum > maxSum) maxSum = tempSum;
+  }
+  return maxSum;
 }
