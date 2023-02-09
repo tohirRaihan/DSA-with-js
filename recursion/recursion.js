@@ -16,6 +16,22 @@ function sumRange(num) {
 }
 
 function factorial(num) {
-  if (num === 1) return 1;
+  if (num < 0) return 0;
+  if (num <= 1) return 1;
   return num * factorial(num - 1);
+}
+
+function fibonacci(n) {
+  if (n <= 2) return 1;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+function power(base, exponent) {
+  if (exponent === 0) return 1;
+  return base * power(base, exponent - 1);
+}
+
+function productOfArray(arr) {
+  if (arr.length === 0) return 1;
+  return arr[0] * productOfArray(arr.slice(1));
 }
