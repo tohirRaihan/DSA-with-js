@@ -1,5 +1,5 @@
 //--> A sorting algorithm where the largest values bubble up to the top!
-//--> O(n**2) -- But good for nearly sorted array
+//--> O(n**2) -- Only good for nearly sorted array
 //--> Don't use Bubble sort unless you know the array is nearly sorted
 
 function bubbleSort(arr) {
