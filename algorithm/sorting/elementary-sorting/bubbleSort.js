@@ -14,6 +14,7 @@ function bubbleSort(arr) {
     }
     if (noSwaps) break;
   }
+  return arr;
 }
 
 function swap(arr, idx1, idx2) {
