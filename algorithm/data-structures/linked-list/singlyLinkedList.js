@@ -13,19 +13,20 @@ class SinglyLinkedList {
   }
 
   push(val) {
+    const newNode = new Node(val);
+    this.length++;
     if (!this.head) {
-      this.head = new Node(val);
+      this.head = newNode;
       this.tail = this.head;
-      this.length++;
       return this;
     }
-    this.tail.next = new Node(val);
-    this.length++;
+    this.tail.next = newNode;
+    this.tail = newNode;
     return this;
   }
 }
 
 const first = new SinglyLinkedList();
-first.push(1).push(2);
+first.push(1).push(2).push(3).push(4);
 
-console.log(first);
+console.log(first.head.next);
