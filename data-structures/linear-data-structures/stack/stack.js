@@ -12,6 +12,7 @@ class Stack {
     this.size = 0;
   }
 
+  // it will work like unshift. We used it because it will be O(1)
   push(val) {
     var newNode = new Node(val);
     if (!this.first) {
@@ -24,7 +25,8 @@ class Stack {
     }
     return ++this.size;
   }
-  
+
+  // it will work like shift. We used it because it will be O(1)
   pop() {
     if (!this.first) return null;
     var temp = this.first;
