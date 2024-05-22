@@ -15,12 +15,12 @@ class BinarySearchTree {
     }
 
     insert(value) {
-        var newNode = new Node(value);
+        const newNode = new Node(value);
         if (this.root === null) {
             this.root = newNode;
             return this;
         }
-        var current = this.root;
+        let current = this.root;
         while (true) {
             if (value === current.value) return undefined;
             if (value < current.value) {
@@ -41,8 +41,8 @@ class BinarySearchTree {
 
     find(value) {
         if (this.root === null) return false;
-        var current = this.root,
-            found = false;
+        let current = this.root;
+        let found = false;
         while (current && !found) {
             if (value < current.value) {
                 current = current.left;
@@ -58,8 +58,8 @@ class BinarySearchTree {
 
     contains(value) {
         if (this.root === null) return false;
-        var current = this.root,
-            found = false;
+        let current = this.root;
+        let found = false;
         while (current && !found) {
             if (value < current.value) {
                 current = current.left;
@@ -73,7 +73,7 @@ class BinarySearchTree {
     }
 
     BFS() {
-        var node = this.root,
+        let node = this.root,
             data = [],
             queue = [];
         queue.push(node);
@@ -88,7 +88,7 @@ class BinarySearchTree {
     }
 
     DFSPreOrder() {
-        var data = [];
+        const data = [];
         function traverse(node) {
             data.push(node.value);
             if (node.left) traverse(node.left);
@@ -99,7 +99,7 @@ class BinarySearchTree {
     }
 
     DFSPostOrder() {
-        var data = [];
+        const data = [];
         function traverse(node) {
             if (node.left) traverse(node.left);
             if (node.right) traverse(node.right);
@@ -110,7 +110,7 @@ class BinarySearchTree {
     }
     
     DFSInOrder() {
-        var data = [];
+        const data = [];
         function traverse(node) {
             if (node.left) traverse(node.left);
             data.push(node.value);
