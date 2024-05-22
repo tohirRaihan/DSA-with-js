@@ -57,12 +57,12 @@ function someRecursive(array, callback) {
 }
 
 function flatten(oldArr) {
-  var newArr = [];
-  for (var i = 0; i < oldArr.length; i++) {
-    if (Array.isArray(oldArr[i])) {
-      newArr = newArr.concat(flatten(oldArr[i]));
+  let newArr = [];
+  for (const element of oldArr) {
+    if (Array.isArray(element)) {
+      newArr = newArr.concat(flatten(element));
     } else {
-      newArr.push(oldArr[i]);
+      newArr.push(element);
     }
   }
   return newArr;
